@@ -49,7 +49,7 @@ export default class Movies extends Component {
     let movies = this.state.movies;
 
     movies.map((movie)=>{
-      if(movie.id === id){
+      if(movie.id === id && typeof movie.ratings !== 'undefined'){
         movie.ratings.push(rating);
         let avg = this.averageRating(movie);
         let [whole, part] = parseFloat(avg).toString().split(".");

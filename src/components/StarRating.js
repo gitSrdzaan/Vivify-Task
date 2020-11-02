@@ -16,6 +16,7 @@ const styles = {
   },
   star: {
     padding: '1px',
+    cursor: 'pointer'
   },
 };
 
@@ -27,8 +28,7 @@ const StarRating = ({ rating, ratingMovie, movieId }) => {
   const containerStyle = { width: `${cropWidth(rating)}px` };
 
   let handleClick = (e)=>{
-    //console.log(e.target.getAttribute('star-id'));
-
+   
     let star =e.target.getAttribute('star-id');
     console.log('star',star);
 
