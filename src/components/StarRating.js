@@ -28,8 +28,8 @@ const StarRating = ({ rating, ratingMovie, movieId }) => {
   const containerStyle = { width: `${cropWidth(rating)}px` };
 
   let handleClick = (e)=>{
-   
-    let star =e.target.getAttribute('star-id');
+    
+    const star = e.target.getAttribute('star-id');
     console.log('star',star);
 
     if(star){
