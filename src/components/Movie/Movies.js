@@ -15,7 +15,7 @@ export default class Movies extends Component {
   }
 
   addMovie = (movie) =>{
-    const lastMovie = this.state.movies[movies.length];
+    const lastMovie = this.state.movies[this.state.movies.length - 1];
     let newId = this.state.movies.length ? lastMovie.id + 100 : 100;
     movie.id = newId;
     movie.rating = 0.0;
@@ -27,7 +27,7 @@ export default class Movies extends Component {
   };
 
   removeMovie = (id) =>{
-    console.log(id);
+   
     this.setState({
       movies : this.state.movies.filter(movie => movie.id !== id)
     })
