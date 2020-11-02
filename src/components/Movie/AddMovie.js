@@ -59,7 +59,7 @@ const AddMovie = ({addMovie}) => {
     }
 
     return ( 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="add-form">
             <div className="form-group col-md-5">
                 <label className="form-label">Title</label>
                 <input className="form-control" type="text" placeholder="title of the movie"

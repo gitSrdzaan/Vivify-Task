@@ -1,5 +1,5 @@
 
-
+/*tooltip creating*/
 .card-footer-badge .tooltiptext {
     visibility: hidden;
     width: 30px;
@@ -22,4 +22,8 @@
 /*making erros text red*/
   .erros {
       color : red;
+  }
+
+.add-form {
+      margin-top: 50px;
   }

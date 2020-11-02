@@ -13,18 +13,20 @@ const MovieCard = ({ movie,removeMovie,ratingMovie }) => (
         <p className="text-justify" style={{ fontSize: '14px' }}>
           {movie.description}
         </p>
+        
       </div>
       <div className="card-footer">
-      <button className="btn btn-danger" onClick={()=>removeMovie(movie.id)}>Delete</button>
+       
         <div className="clearfix">
           <div className="float-left mt-1">
             <StarRating rating={movie.rating} ratingMovie={ratingMovie} movieId={movie.id}/>
           </div>
           <div className="card-footer-badge float-right badge badge-primary badge-pill">{movie.rating}
-             <span className="float-right badge badge-primary badge-pill tooltiptext">{movie.ratings ? movie.ratings.length : null}</span>
+             <span className="badge tooltiptext">
+               {movie.ratings ? movie.ratings.length : null}</span>
           </div>
-            
         </div>
+        <button className="btn btn-danger del-btn" onClick={()=>removeMovie(movie.id)}>Delete</button>
       </div>
     </div>
   </div>

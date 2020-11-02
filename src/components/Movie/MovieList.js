@@ -12,7 +12,7 @@ const getMovies = (movies,addMovie,removeMovie, ratingMovie) => (
       ))}
       
     </div>
-      <div>
+      <div className="add-form">
         <AddMovie addMovie={addMovie} />
       </div>
   </div>
