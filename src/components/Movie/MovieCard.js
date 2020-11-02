@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import StarRating from '../StarRating';
 
-const MovieCard = ({ movie }) => (
+const MovieCard = ({ movie,removeMovie }) => (
   <div className="movie-card">
     <div className="movie-card card">
       <img className="card-img-top" src={movie.imageUrl} alt="" />
@@ -15,7 +15,12 @@ const MovieCard = ({ movie }) => (
         </p>
       </div>
       <div className="card-footer">
+        <div>
+        <button onClick={()=>removeMovie(movie.id)}>Delete</button>
+        </div>
+        
         <div className="clearfix">
+         
           <div className="float-left mt-1">
             <StarRating rating={movie.rating} />
           </div>
