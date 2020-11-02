@@ -27,7 +27,7 @@ export default class Movies extends Component {
   };
 
   removeMovie = (id) =>{
-   
+    //console.log(id);
     this.setState({
       movies : this.state.movies.filter(movie => movie.id !== id)
     })

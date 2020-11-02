@@ -10,6 +10,7 @@ const AddMovie = ({addMovie}) => {
     const [erros, setErros] = useState({});
 
     const validForm = () =>{
+        console.log('validation');
         let temp = {};
         let flag = true;
 
@@ -26,7 +27,7 @@ const AddMovie = ({addMovie}) => {
             flag = false;
         };
         if(description === ''){
-            temp.title = "Description must be entered";
+            temp.description = "Description must be entered";
             flag = false;
         };
 
@@ -43,7 +44,7 @@ const AddMovie = ({addMovie}) => {
     const handleSubmit = (e) =>{
         e.preventDefault();
 
-        if(!validForm) return;
+        if(!validForm()) return;
 
         const movie = {
             title,
@@ -67,17 +68,17 @@ const AddMovie = ({addMovie}) => {
             <div className="form-group col-md-5">
                 <label className="form-label">Subtitle</label>
                 <input className="form-control" type="text" value={subtitle} onChange={(e)=> setSubtitle(e.target.value)}/>
-                <div className="erros"></div>
+                <div className="erros">{erros.subtitle ? erros.subtitle : null}</div>
             </div>
             <div className="form-group col-md-5">
                 <label className="form-label">Image url</label>
                 <input className="form-control" type="text" value={imageUrl} onChange={(e)=> setImageUrl(e.target.value)}/>
-                <div className="erros"></div>
+                <div className="erros">{erros.imageUrl ? erros.imageUrl : null}</div>
             </div>
             <div className="form-group col-md-5">
                 <label className="form-label">Description</label>
                 <textarea className="form-control"  value={description} onChange={(e)=> setDescription(e.target.value)}/>
-                <div className="erros"></div>
+                <div className="erros">{erros.description ? erros.description : null}</div>
             </div>
             <div className="form-group col-md-5">
                 <button className="btn btn-primary">Add new movie</button>
