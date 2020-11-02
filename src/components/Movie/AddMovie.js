@@ -10,7 +10,7 @@ const AddMovie = ({addMovie}) => {
     const [erros, setErros] = useState({});
 
     const validForm = () =>{
-        console.log('validation');
+       
         let temp = {};
         let flag = true;
 
@@ -62,22 +62,26 @@ const AddMovie = ({addMovie}) => {
         <form onSubmit={handleSubmit}>
             <div className="form-group col-md-5">
                 <label className="form-label">Title</label>
-                <input className="form-control" type="text" value={title} onChange={(e)=> setTitle(e.target.value)}/>
+                <input className="form-control" type="text" placeholder="title of the movie"
+                 value={title} onChange={(e)=> setTitle(e.target.value)}/>
                 <div className="erros">{erros.title ? erros.title : null}</div>
             </div>
             <div className="form-group col-md-5">
                 <label className="form-label">Subtitle</label>
-                <input className="form-control" type="text" value={subtitle} onChange={(e)=> setSubtitle(e.target.value)}/>
+                <input className="form-control" type="text" placeholder="subtitle of the movie"
+                value={subtitle} onChange={(e)=> setSubtitle(e.target.value)}/>
                 <div className="erros">{erros.subtitle ? erros.subtitle : null}</div>
             </div>
             <div className="form-group col-md-5">
                 <label className="form-label">Image url</label>
-                <input className="form-control" type="text" value={imageUrl} onChange={(e)=> setImageUrl(e.target.value)}/>
+                <input className="form-control" type="text" placeholder="image url of the movie"
+                value={imageUrl} onChange={(e)=> setImageUrl(e.target.value)}/>
                 <div className="erros">{erros.imageUrl ? erros.imageUrl : null}</div>
             </div>
             <div className="form-group col-md-5">
                 <label className="form-label">Description</label>
-                <textarea className="form-control"  value={description} onChange={(e)=> setDescription(e.target.value)}/>
+                <textarea className="form-control" placeholder="description of the movie"
+                 value={description} onChange={(e)=> setDescription(e.target.value)}/>
                 <div className="erros">{erros.description ? erros.description : null}</div>
             </div>
             <div className="form-group col-md-5">
