@@ -15,19 +15,19 @@ const AddMovie = ({addMovie}) => {
         let flag = true;
 
         if(title === ''){
-            temp.title = "Title must be entered";
+            temp.title = "*Title must be entered";
             flag = false;
         };
         if(subtitle === ''){
-            temp.subtitle = "Subtitle must be entered";
+            temp.subtitle = "*Subtitle must be entered";
             flag = false;
         };
         if(imageUrl === ''){
-            temp.imageUrl = "Image url must be entered";
+            temp.imageUrl = "*Image url must be entered";
             flag = false;
         };
         if(description === ''){
-            temp.description = "Description must be entered";
+            temp.description = "*Description must be entered";
             flag = false;
         };
 
